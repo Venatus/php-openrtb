@@ -3,7 +3,7 @@ namespace openrtb\models;
 
 class Impression {
   
-  protected $required = array(
+  protected $attributes = array(
     'id' => array(
       'required' => true,
       'type' => 'string',

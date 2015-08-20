@@ -3,7 +3,7 @@ namespace openrtb;
 
 class BidRequest {
   
-  protected $required = array(
+  protected $attributes = array(
     'id' => array(
       'required' => true,
       'type' => 'string',

@@ -1,0 +1,7 @@
+vendor/
+nbproject/*
+*.swp
+*.AppleDouble
+*.DS_Store
+._*
+/nbproject/*

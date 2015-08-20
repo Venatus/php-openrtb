@@ -1,0 +1,18 @@
+{
+  "name": "venatus/openrtb",
+  "description": "Venatus OpenRTB",
+  "authors": [
+    {
+      "name": "Chris Beck",
+      "email": "chrisb@venatusmedia.com"
+    }
+  ],
+  "require": {
+  
+  },
+  "autoload": {
+    "psr-0": {
+      "openrtb\\": "src"
+    }
+  }
+}

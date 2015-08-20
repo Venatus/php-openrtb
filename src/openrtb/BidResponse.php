@@ -9,7 +9,6 @@ class BidResponse {
       'type' => 'string',
     ),
     'seatbid' => array(
-      'required' => true,
       'type' => 'models/SeatBid',
     ),
     'bidid' => array(

@@ -20,5 +20,5 @@ class SeatBid {
 			'type' => 'models/Extension'
 		)
 	);
-  
+
 }

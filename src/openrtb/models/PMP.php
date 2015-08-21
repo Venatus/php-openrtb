@@ -1,7 +1,8 @@
 <?php
-namespace openrtb;
+namespace openrtb\models;
 
 class PMP {
+  
 	protected $attributes = array(
 		'private_auction' => array(
 			'type' => 'integer'
@@ -14,4 +15,5 @@ class PMP {
 			'type' => 'models/Extension'
 		)
 	);
+  
 }

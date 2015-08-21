@@ -1,7 +1,8 @@
 <?php
-namespace openrtb;
+namespace openrtb\models;
 
 class Data {
+  
 	protected $attributes = array(
 		'id' => array (
 			'type' => 'string'
@@ -17,4 +18,5 @@ class Data {
 			'type' => 'models/Extension'
 		),
 	);
+  
 }

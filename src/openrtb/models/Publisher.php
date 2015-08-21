@@ -1,7 +1,8 @@
 <?php
-namespace openrtb;
+namespace openrtb\models;
 
 class Publisher {
+  
 	protected $attributes = array(
 		'id' => array (
 			'type' => 'string'
@@ -20,4 +21,5 @@ class Publisher {
 			'type' => 'models/Extension'
 		),
 	);
+  
 }

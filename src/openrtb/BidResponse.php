@@ -1,7 +1,7 @@
 <?php
 namespace openrtb;
 
-class BidResponse {
+class BidResponse extends \openrtb\abstraction\BaseModel {
   
   protected $attributes = array(
     'id' => array(
@@ -28,5 +28,10 @@ class BidResponse {
       'type' => 'models/Extension',
     ),
   );
+  
+  public function __constuct($reponse){
+    
+    
+  }
     
 }

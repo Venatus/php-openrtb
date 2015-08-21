@@ -1,7 +1,8 @@
 <?php
-namespace openrtb;
+namespace openrtb\models;
 
 class Geo {
+  
 	protected $attributes = array(
 		'lat' => array (
 			'type' => 'float'
@@ -37,4 +38,5 @@ class Geo {
 			'type' => 'models/Extension'
 		),
 	);
+  
 }

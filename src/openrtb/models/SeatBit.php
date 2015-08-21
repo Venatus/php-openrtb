@@ -1,7 +1,8 @@
 <?php
-namespace openrtb;
+namespace openrtb\models;
 
 class SeatBid {
+  
 	protected $attributes = array(
 		'bid' => array(
 			'type' => 'array',
@@ -19,4 +20,5 @@ class SeatBid {
 			'type' => 'models/Extension'
 		)
 	);
+  
 }

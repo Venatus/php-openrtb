@@ -1,7 +1,7 @@
 <?php
 namespace openrtb\models;
 
-class Segment {
+class Segment extends \openrtb\abstractions\BaseModel {
   
   protected $attributes = array(
     'id' => array(
@@ -14,7 +14,7 @@ class Segment {
       'type' => 'string',
     ),
     'ext' => array(
-      'type' => 'models/Extension',
+      'type' => 'openrtb\models\Extension',
     ),
   );
   

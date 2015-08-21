@@ -1,7 +1,7 @@
 <?php
 namespace openrtb\models;
 
-class Geo {
+class Geo extends \openrtb\abstractions\BaseModel {
   
 	protected $attributes = array(
 		'lat' => array (
@@ -35,7 +35,7 @@ class Geo {
 			'type' => 'integer'
 		),
 		'ext' => array (
-			'type' => 'models/Extension'
+			'type' => 'openrtb\models\Extension'
 		),
 	);
   

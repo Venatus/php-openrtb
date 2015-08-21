@@ -1,7 +1,7 @@
 <?php
 namespace openrtb;
 
-class BidRequest {
+class BidRequest extends \openrtb\abstractions\BaseModel {
   
   protected $attributes = array(
     'id' => array(
@@ -10,16 +10,16 @@ class BidRequest {
     ),
     'imp' => array(
       'required' => true,
-      'type' => 'models/Impression',
+      'type' => 'openrtb\models\Impression',
     ),
     'app' => array(
-      'type' => 'models/App',
+      'type' => 'openrtb\models\App',
     ),
     'device' => array(
-      'type' => 'models/Device',
+      'type' => 'openrtb\models\Device',
     ),
     'user' => array(
-      'type' => 'models/User',
+      'type' => 'openrtb\models\User',
     ),
     'test' => array(
       'type' => 'integer',
@@ -41,7 +41,7 @@ class BidRequest {
       'default_value' => 0,
     ),
     'cur' => array(
-      'type' => 'models/Currency',
+      'type' => 'openrtb\models\Currency',
     ),
     'bcat' => array(
       'type' => 'array',
@@ -52,10 +52,10 @@ class BidRequest {
       'sub_type' => 'string',
     ),
     'regs' => array(
-      'type' => 'models/Regulation',
+      'type' => 'openrtb\models\Regulation',
     ),
     'ext' => array(
-      'type' => 'models/Extension',
+      'type' => 'openrtb\models\Extension',
     ),
   );
   

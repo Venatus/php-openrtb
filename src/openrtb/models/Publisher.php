@@ -1,7 +1,7 @@
 <?php
 namespace openrtb\models;
 
-class Publisher {
+class Publisher extends \openrtb\abstractions\BaseModel {
   
 	protected $attributes = array(
 		'id' => array (
@@ -18,7 +18,7 @@ class Publisher {
 			'type' => 'string'
 		),
 		'ext' => array (
-			'type' => 'models/Extension'
+			'type' => 'openrtb\models\Extension'
 		),
 	);
   

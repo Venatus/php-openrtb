@@ -1,7 +1,7 @@
 <?php
 namespace openrtb\models;
 
-class Deal {
+class Deal extends \openrtb\abstractions\BaseModel {
   
   protected $attributes = array(
     'id' => array(
@@ -28,7 +28,7 @@ class Deal {
       'sub_type' => 'string',
     ),
     'ext' => array(
-      'type' => 'models/Extension',
+      'type' => 'openrtb\models\Extension',
     ),
   );
   

@@ -1,45 +1,45 @@
 <?php
 namespace openrtb\models;
 
-class Bid {
+class Bid extends \openrtb\abstractions\BaseModel {
   
 	protected $attributes = array(
 		'id' => array(
       'required' => true,
-			'type' = 'string'
+			'type' => 'string'
 		),
 		'impid' => array(
       'required' => true,
-			'type' = 'string'
+			'type' => 'string'
 		),
 		'price' => array(
       'required' => true,
-			'type' = 'float'
+			'type' => 'float'
 		),
 		'adid' => array(
-			'type' = 'string'
+			'type' => 'string'
 		),
 		'nurl' => array(
-			'type' = 'string'
+			'type' => 'string'
 		),
 		'adm' => array(
-			'type' = 'string'
+			'type' => 'string'
 		),
 		'adomain' => array(
  			'type' =>  'array',
  			'sub_type' => 'string'
 		),
 		'bundle' => array(
-			'type' = 'string'
+			'type' => 'string'
 		),
 		'iurl' => array(
-			'type' = 'string'
+			'type' => 'string'
 		),
 		'cid' => array(
-			'type' = 'string'
+			'type' => 'string'
 		),
 		'crid' => array(
-			'type' = 'string'
+			'type' => 'string'
 		),
 		'cat' => array(
  			'type' =>  'array',
@@ -50,16 +50,16 @@ class Bid {
  			'sub_type' => 'integer'
 		),
 		'dealid' => array(
-			'type' = 'string'
+			'type' => 'string'
 		),
 		'h' => array(
-			'type' = 'integer'
+			'type' => 'integer'
 		),
 		'w' => array(
-			'type' = 'integer'
+			'type' => 'integer'
 		),
  		'ext' => array(
- 			'type' =>  'models/Extension'
+ 			'type' =>  'openrtb\models\Extension'
  		),
 	);
   

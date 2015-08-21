@@ -1,7 +1,7 @@
 <?php
 namespace openrtb\models;
 
-class Producer {
+class Producer extends \openrtb\abstractions\BaseModel {
   
   protected $attributes = array(
     'id' => array(
@@ -18,7 +18,7 @@ class Producer {
       'type' => 'string',
     ),
     'ext' => array(
-      'type' => 'models/Extension',
+      'type' => 'openrtb\models\Extension',
     ),
   );
   

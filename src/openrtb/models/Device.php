@@ -1,7 +1,7 @@
 <?php
 namespace openrtb\models;
 
-class Device {
+class Device extends \openrtb\abstractions\BaseModel {
   
   protected $attributes = array(
     'id' => array(
@@ -11,7 +11,7 @@ class Device {
       'type' => 'string',
     ),
     'geo' => array(
-      'type' => 'models/Geo',
+      'type' => 'openrtb\models\Geo',
     ),
     'dnt' => array(
       'type' => 'integer',
@@ -92,7 +92,7 @@ class Device {
       'type' => 'string',
     ),
     'ext' => array(
-      'type' => 'models/Extension',
+      'type' => 'openrtb\models\Extension',
     ),
   );
   

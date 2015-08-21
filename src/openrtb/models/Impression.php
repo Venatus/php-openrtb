@@ -1,7 +1,7 @@
 <?php
 namespace openrtb\models;
 
-class Impression {
+class Impression extends \openrtb\abstractions\BaseModel {
   
   protected $attributes = array(
     'id' => array(
@@ -9,13 +9,13 @@ class Impression {
       'type' => 'string',
     ),
     'banner' => array(
-      'type' => 'models/Banner',
+      'type' => 'openrtb\models\Banner',
     ),
     'video' => array(
-      'type' => 'models/Video',
+      'type' => 'openrtb\models\Video',
     ),
     'native' => array(
-      'type' => 'models/Video',
+      'type' => 'openrtb\models\Video',
     ),
     'displaymanager' => array(
       'type' => 'string',
@@ -46,10 +46,10 @@ class Impression {
       'sub_type' => 'string',
     ),
     'pmp' => array(
-      'type' => 'models/PMP',
+      'type' => 'openrtb\models\PMP',
     ),
     'ext' => array(
-      'type' => 'models/Extension',
+      'type' => 'openrtb\models\Extension',
     ),
   );
   

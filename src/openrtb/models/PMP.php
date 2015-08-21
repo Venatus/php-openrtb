@@ -1,7 +1,7 @@
 <?php
 namespace openrtb\models;
 
-class PMP {
+class PMP extends \openrtb\abstractions\BaseModel {
   
 	protected $attributes = array(
 		'private_auction' => array(
@@ -9,10 +9,10 @@ class PMP {
 		),
 		'deals' => array(
 			'type' => 'array',
-			'sub_type' => 'models/Deal'
+			'sub_type' => 'openrtb\models\Deal'
 		),
 		'ext' => array(
-			'type' => 'models/Extension'
+			'type' => 'openrtb\models\Extension'
 		)
 	);
   

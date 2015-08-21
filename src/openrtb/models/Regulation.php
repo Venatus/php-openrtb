@@ -1,7 +1,7 @@
 <?php
 namespace openrtb\models;
 
-class Regulation {
+class Regulation extends \openrtb\abstractions\BaseModel {
   
   protected $attributes = array(
     'id' => array(
@@ -11,7 +11,7 @@ class Regulation {
       'type' => 'integer',
     ),
     'ext' => array(
-      'type' => 'models/Extension',
+      'type' => 'openrtb\models\Extension',
     ),
   );
   

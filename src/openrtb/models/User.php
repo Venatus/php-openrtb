@@ -1,7 +1,7 @@
 <?php
 namespace openrtb\models;
 
-class User {
+class User extends \openrtb\abstractions\BaseModel {
   
 	protected $attributes = array(
 		'id' => array (
@@ -23,13 +23,13 @@ class User {
 			'type' => 'string'
 		),
 		'geo' => array (
-			'type' => 'models/Geo'
+			'type' => 'openrtb\models\Geo'
 		),
 		'data' => array (
-			'type' => 'models/Data'
+			'type' => 'openrtb\models\Data'
 		),
 		'ext' => array (
-			'type' => 'models/Extension'
+			'type' => 'openrtb\models\Extension'
 		),
 	);
   

@@ -1,7 +1,7 @@
 <?php
 namespace openrtb;
 
-class BidResponse extends \openrtb\abstraction\BaseModel {
+class BidResponse extends \openrtb\abstractions\BaseModel {
   
   protected $attributes = array(
     'id' => array(
@@ -9,7 +9,7 @@ class BidResponse extends \openrtb\abstraction\BaseModel {
       'type' => 'string',
     ),
     'seatbid' => array(
-      'type' => 'models/SeatBid',
+      'type' => 'openrtb\models\SeatBid',
     ),
     'bidid' => array(
       'type' => 'string',
@@ -25,12 +25,11 @@ class BidResponse extends \openrtb\abstraction\BaseModel {
       'type' => 'integer',
     ),
     'ext' => array(
-      'type' => 'models/Extension',
+      'type' => 'openrtb\models\Extension',
     ),
   );
   
   public function __constuct($reponse){
-    
     
   }
     

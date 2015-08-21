@@ -1,12 +1,12 @@
 <?php
 namespace openrtb\models;
 
-class SeatBid {
+class SeatBid extends \openrtb\abstractions\BaseModel {
   
 	protected $attributes = array(
 		'bid' => array(
 			'type' => 'array',
-			'sub_type' => 'models/Bid',
+			'sub_type' => 'openrtb\models\Bid',
 			'required' => true
 		),
 		'seat' => array(
@@ -17,7 +17,7 @@ class SeatBid {
 			'default_value' => 0
 		),
 		'ext' => array(
-			'type' => 'models/Extension'
+			'type' => 'openrtb\models\Extension'
 		)
 	);
 

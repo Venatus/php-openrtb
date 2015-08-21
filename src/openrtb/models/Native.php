@@ -1,7 +1,7 @@
 <?php
 namespace openrtb\models;
 
-class Banner {
+class Banner extends \openrtb\abstractions\BaseModel {
   
   protected $attributes = array(
     'id' => array(
@@ -23,7 +23,7 @@ class Banner {
       'sub_type' => 'integer',
     ),
     'ext' => array(
-      'type' => 'models/Extension',
+      'type' => 'openrtb\models\Extension',
     ),
   );
   

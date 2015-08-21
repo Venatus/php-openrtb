@@ -1,7 +1,7 @@
 <?php
 namespace openrtb\models;
 
-class Video {
+class Video extends \openrtb\abstractions\BaseModel {
   
   protected $attributes = array(
     'id' => array(
@@ -70,18 +70,18 @@ class Video {
     ),
     'companionad' => array(
       'type' => 'array',
-      'sub_type' => 'models/Banner',
+      'sub_type' => 'openrtb\models\Banner',
     ),
     'companiontype' => array(
       'type' => 'array',
-      'sub_type' => 'models/Banner',
+      'sub_type' => 'openrtb\models\Banner',
     ),
     'api' => array(
       'type' => 'array',
       'sub_type' => 'integer',
     ),
     'ext' => array(
-      'type' => 'models/Extension',
+      'type' => 'openrtb\models\Extension',
     ),
   );
   

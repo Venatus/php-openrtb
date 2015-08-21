@@ -1,5 +1,5 @@
 <?php
-namespace openrtb;
+namespace openrtb\models;
 
 class Bid {
   

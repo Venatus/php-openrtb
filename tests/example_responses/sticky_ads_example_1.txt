@@ -1,0 +1,40 @@
+{
+   "id":3654654,
+   "cur":"EUR",
+   "seatbid":[
+      {
+         "group":0,
+         "bid":[
+            {
+               "adid":"4532",
+               "impid":1,
+               "price":0.5,
+               "dealid": "ABC-1234-6789",
+               "id":"STICKY_123_1_0",
+               "adm":"<?xml version='1.0' encoding='UTF-8'?>
+<VAST version='2.0'>
+ <Ad id='sticky4532'>
+  <InLine>
+   <AdSystem>sticky</AdSystem>
+   <AdTitle><![CDATA[Test ABO - punto RTB]]></AdTitle>
+   <Description><![CDATA[Test ABO - RTB - punto]]></Description>
+   <Creatives>
+    <Creative id='4532'>
+     <Linear>
+      <Duration>00:00:25</Duration>
+      <MediaFiles>
+       <MediaFile delivery='progressive' bitrate='250' width='1280' height='720' type='video/mp4'>
+        <![CDATA[http://cdn1-preprod.stickyadstv.com/www/images/puntoptwzencoder_4.mp4]]>
+       </MediaFile>
+      </MediaFiles>
+     </Linear>
+    </Creative>
+   </Creatives>
+  </InLine>
+ </Ad>
+</VAST>"
+            }
+         ]
+      }
+   ]
+}

@@ -1,7 +1,7 @@
 <?php
 namespace openrtb;
 
-class BidResponse extends \openrtb\abstractions\BaseModel {
+class BidResponse extends \openrtb\abstractions\ParentModel {
   
   protected $attributes = array(
     'id' => array(

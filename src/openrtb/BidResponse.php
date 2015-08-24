@@ -6,23 +6,24 @@ class BidResponse extends \openrtb\abstractions\ParentModel {
   protected $attributes = array(
     'id' => array(
       'required' => true,
-      'type' => 'string',
+      'type' => self::ATTR_ID,
     ),
     'seatbid' => array(
-      'type' => 'openrtb\models\SeatBid',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => 'openrtb\models\SeatBid',
     ),
     'bidid' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'cur' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
       'default_value' => 'USD',
     ),
     'customdata' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'nbr' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'ext' => array(
       'type' => 'openrtb\models\Extension',

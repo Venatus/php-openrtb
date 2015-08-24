@@ -5,80 +5,80 @@ class Video extends \openrtb\abstractions\BaseModel {
   
   protected $attributes = array(
     'id' => array(
-      'type' => 'string',
+      'type' => self::ATTR_ID,
     ),
     'w' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'h' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'mimes' => array(
       'required' => true,
-      'type' => 'array',
-      'sub_type' => 'string',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_STRING,
     ),
     'minduration' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'maxduration' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'protocol' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'protocols' => array(
-      'type' => 'array',
-      'sub_type' => 'integer',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_INTEGER,
     ),
     'startdelay' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'linearity' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'sequence' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'battr' => array(
-      'type' => 'array',
-      'sub_type' => 'integer',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_INTEGER,
     ),
     'maxextended' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'minbitrate' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'maxbitrate' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'boxingallowed' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
       'default_value' => 1,
     ),
     'playbackmethod' => array(
-      'type' => 'array',
-      'sub_type' => 'integer',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_INTEGER,
     ),
     'delivery' => array(
-      'type' => 'array',
-      'sub_type' => 'integer',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_INTEGER,
     ),
     'pos' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'companionad' => array(
-      'type' => 'array',
+      'type' => self::ATTR_ARRAY,
       'sub_type' => 'openrtb\models\Banner',
     ),
     'companiontype' => array(
-      'type' => 'array',
+      'type' => self::ATTR_ARRAY,
       'sub_type' => 'openrtb\models\Banner',
     ),
     'api' => array(
-      'type' => 'array',
-      'sub_type' => 'integer',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_INTEGER,
     ),
     'ext' => array(
       'type' => 'openrtb\models\Extension',

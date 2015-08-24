@@ -5,34 +5,34 @@ class Geo extends \openrtb\abstractions\BaseModel {
   
 	protected $attributes = array(
 		'lat' => array (
-			'type' => 'float'
+			'type' => self::ATTR_FLOAT
 		),
 		'lon' => array (
-			'type' => 'float'
+			'type' => self::ATTR_FLOAT
 		),
 		'type' => array (
-			'type' => 'integer'
+			'type' => self::ATTR_INTEGER
 		),
 		'country' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'region' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'regionfips104' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'metro' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'city' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'zip' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'utcoffset' => array (
-			'type' => 'integer'
+			'type' => self::ATTR_INTEGER
 		),
 		'ext' => array (
 			'type' => 'openrtb\models\Extension'

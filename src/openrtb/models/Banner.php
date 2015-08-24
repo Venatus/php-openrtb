@@ -5,51 +5,51 @@ class Banner extends \openrtb\abstractions\BaseModel {
   
   protected $attributes = array(
     'id' => array(
-      'type' => 'string',
+      'type' => self::ATTR_ID,
     ),
     'w' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'h' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'wmax' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'hmax' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'wmin' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'hmin' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'btype' => array(
-      'type' => 'array',
-      'sub_type' => 'integer',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_INTEGER,
     ),
     'battr' => array(
-      'type' => 'array',
-      'sub_type' => 'integer',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_INTEGER,
     ),
     'pos' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'mimes' => array(
-      'type' => 'array',
-      'sub_type' => 'string',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_STRING,
     ),
     'topframe' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'expdir' => array(
-      'type' => 'array',
-      'sub_type' => 'integer',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_INTEGER,
     ),
     'api' => array(
-      'type' => 'array',
-      'sub_type' => 'integer',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_INTEGER,
     ),
     'ext' => array(
       'type' => 'openrtb\models\Extension',

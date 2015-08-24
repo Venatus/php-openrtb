@@ -5,13 +5,13 @@ class Segment extends \openrtb\abstractions\BaseModel {
   
   protected $attributes = array(
     'id' => array(
-      'type' => 'string',
+      'type' => self::ATTR_ID,
     ),
     'name' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'value' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'ext' => array(
       'type' => 'openrtb\models\Extension',

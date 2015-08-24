@@ -5,9 +5,21 @@ mb_internal_encoding('UTF-8');
 require_once(__DIR__.'/../vendor/autoload.php');
 
 
-$exampleResponse = file_get_contents(__DIR__.'/example_responses/sticky_ads_example_1.txt');
-$bidResponse = new \openrtb\BidResponse();
-$bidResponse->hydrate($exampleResponse);
+try {
+	$exampleResponse = file_get_contents(__DIR__.'/example_responses/sticky_ads_example_1.txt');
+	$bidResponse = new \openrtb\BidResponse();
+	$bidResponse->hydrate($exampleResponse);
+} catch(\Exception $e) {
+	var_dump($e->getMessage());
+}
+
+try {
+	$exampleRequest = file_get_contents(__DIR__.'/example_requests/sticky_ads_example_2.txt');
+	$bidRequest = new \openrtb\BidRequest();
+	$bidRequest->hydrate($exampleRequest);
+} catch (\Exception $e) {
+	var_dump($e->getMessage());
+}
 
 // $bidResponse = new \openrtb\BidResponse();
 // $bidResponse->set('id','ABC123');

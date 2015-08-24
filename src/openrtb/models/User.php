@@ -5,22 +5,22 @@ class User extends \openrtb\abstractions\BaseModel {
   
 	protected $attributes = array(
 		'id' => array (
-			'type' => 'string'
+			'type' => self::ATTR_ID
 		),
 		'buyeruid' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'yob' => array (
-			'type' => 'integer'
+			'type' => self::ATTR_INTEGER
 		),
 		'gender' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'keywords' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'customdata' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'geo' => array (
 			'type' => 'openrtb\models\Geo'

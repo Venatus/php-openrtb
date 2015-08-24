@@ -5,91 +5,91 @@ class Device extends \openrtb\abstractions\BaseModel {
   
   protected $attributes = array(
     'id' => array(
-      'type' => 'string',
+      'type' => self::ATTR_ID,
     ),
     'ua' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'geo' => array(
       'type' => 'openrtb\models\Geo',
     ),
     'dnt' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'lmt' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'ip' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'ipv6' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'devicetype' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'make' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'model' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'os' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'osv' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'hwv' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'h' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'w' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'ppi' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'pxratio' => array(
-      'type' => 'float',
+      'type' => self::ATTR_FLOAT,
     ),
     'js' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'flashver' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'language' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'carrier' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'connectiontype' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'ifa' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'didsha1' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'didmd5' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'dpidsha1' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'dpidmd5' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'macsha1' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'macmd5' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'ext' => array(
       'type' => 'openrtb\models\Extension',

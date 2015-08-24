@@ -17,6 +17,10 @@ abstract class BaseModel {
     $this->modelName = get_class($this);
   }
   
+  /**
+   * Checks that a model has all required attributes set.
+   * @return boolean
+   */
   public function hasRequiredAttributes(){
     foreach($this->attributes as $k => $v){
       if(isset($v['required']) && ($v['required']===true)){
@@ -27,7 +31,11 @@ abstract class BaseModel {
     }
     return true;
   }
-
+  /**
+   * Populates the model from a JSON source (or json_decoded value)
+   * @param string|stdClass $data The data
+   * @param boolean $fromJSON Flag to bypass json_decode when $data is already decoded
+   */
   public function hydrate($data, $fromJson = true){
     $data = ($fromJson)? json_decode($data): $data;
 
@@ -71,7 +79,13 @@ abstract class BaseModel {
       throw new \openrtb\exceptions\ValidationException('Unable to parse json');
     }
   }
-  
+  /**
+   * Validates a given value's type against schema definition
+   * @param mixed $obj The value to validate
+   * @param string $type The expected type
+   * @param string $subType The expected subtype if applicable (when $type===array)
+   * @return boolean
+   */
   public function validateType($obj, $type, $subType = null){
     if($this->isModel($type)){
       if(is_a($obj, $type)){
@@ -119,7 +133,12 @@ abstract class BaseModel {
     throw new \openrtb\exceptions\ValidationException('Unknown native type "'.$type.'" specified');
     return false;
   }
-  
+
+  /**
+   * Set an attribute onto the model
+   * @param string $item Key name
+   * @param mixed $value The value
+   */
   public function set($item, $value){
     if(array_key_exists($item,$this->attributes)){
       if(isset($this->attributes[$item]['type'])){
@@ -138,11 +157,18 @@ abstract class BaseModel {
       throw new \openrtb\exceptions\ValidationException('Item "'.$item.'" is not defined in the schema for model '.$this->modelName);
     }
   }
-  
+  /**
+   * Returns a given attribute
+   * @param string $item Attribute name
+   * @return mixed
+   */
   public function get($item){
     return isset($this->data[$item])? $this->data[$item] : null;
   }
-  
+  /**
+   * Returns the model data as an 'array'
+   * @return array
+   */
   public function getDataAsArray(){
     $rtn = [];
     foreach($this->data as $k => $v){
@@ -163,7 +189,10 @@ abstract class BaseModel {
     }
     return $rtn;
   }
-  
+  /**
+   * Returns the model data as a JSON string
+   * @return string
+   */
   public function getDataAsJson(){
     return json_encode($this->getDataAsArray());
   }

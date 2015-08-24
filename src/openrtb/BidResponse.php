@@ -9,7 +9,8 @@ class BidResponse extends \openrtb\abstractions\ParentModel {
       'type' => self::ATTR_ID,
     ),
     'seatbid' => array(
-      'type' => 'openrtb\models\SeatBid',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => 'openrtb\models\SeatBid',
     ),
     'bidid' => array(
       'type' => self::ATTR_STRING,

@@ -10,7 +10,7 @@ class Bid extends \openrtb\abstractions\BaseModel {
 		),
 		'impid' => array(
       		'required' => true,
-			'type' => self::ATTR_STRING
+			'type' => self::ATTR_ID
 		),
 		'price' => array(
       		'required' => true,

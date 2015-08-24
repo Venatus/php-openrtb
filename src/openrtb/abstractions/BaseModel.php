@@ -11,6 +11,11 @@ abstract class BaseModel {
   
   protected $attributes = [];
   protected $data = [];
+  protected $modelName = '';
+
+  public function __construct() {
+    $this->modelName = get_class($this);
+  }
   
   public function hasRequiredAttributes(){
     foreach($this->attributes as $k => $v){
@@ -21,6 +26,50 @@ abstract class BaseModel {
       }
     }
     return true;
+  }
+
+  public function hydrate($data, $fromJson = true){
+    $data = ($fromJson)? json_decode($data): $data;
+
+    if($data){
+      foreach($this->attributes as $attr=>$opts) {
+        if(!property_exists($data, $attr)) {
+          if(isset($opts['required'])) {
+            throw new \openrtb\exceptions\ValidationException('Missing required attribute "' . $attr . '" for model '.$this->modelName.'.'); 
+          } elseif(isset($opts['default_value'])) {
+            $this->set($attr, $opts['default_value']);
+          } 
+          continue;
+        }
+
+        $subType = (isset($opts['sub_type']))? $opts['sub_type'] : null;
+
+        //Hydrate properties
+        if($this->isModel($opts['type'])) {
+          $obj = new $opts['type'];
+          $obj->hydrate($data->$attr, false);
+
+          $this->set($attr, $obj);
+        } elseif($opts['type'] === self::ATTR_ARRAY) {
+          if(!$this->isModel($subType)) {
+            $this->set($attr, $data->$attr);
+          } else {
+            $objs = array();
+            foreach($data->$attr as $val) {
+              $subObj = new $subType;
+              $subObj->hydrate($val, false);
+              $objs[] = $subObj;
+            }
+
+            $this->set($attr, $objs);
+          }
+        } else {
+          $this->set($attr, $data->$attr);
+        }
+      }
+    } else {
+      throw new \openrtb\exceptions\ValidationException('Unable to parse json');
+    }
   }
   
   public function validateType($obj, $type, $subType = null){
@@ -46,7 +95,7 @@ abstract class BaseModel {
         return is_integer($obj)? true : false;
         break;
       case self::ATTR_FLOAT:
-        return is_float($obj)? true : false;
+        return is_numeric($obj)? true : false; //Values can come as int/string/float despite specification indicating a float type.
         break;
       case self::ATTR_ARRAY:
         //only collection type supported...
@@ -79,13 +128,14 @@ abstract class BaseModel {
         if($this->validateType($value, $type, $subType)){
           $this->data[$item] = $value;
         } else {
-          throw new \openrtb\exceptions\ValidationException('Item "'.$item.'" failed validation of type "'.$type.'"');
+          var_dump($value);
+          throw new \openrtb\exceptions\ValidationException('Item "'.$item.'" failed validation of type "'.$type.'" for model '.$this->modelName);
         }
       } else {
-        throw new \openrtb\exceptions\ValidationException('Item "'.$item.'" type is not defined in the schema');
+        throw new \openrtb\exceptions\ValidationException('Item "'.$item.'" type is not defined in the schema for model '.$this->modelName);
       }
     } else {
-      throw new \openrtb\exceptions\ValidationException('Item "'.$item.'" is not defined in the schema');
+      throw new \openrtb\exceptions\ValidationException('Item "'.$item.'" is not defined in the schema for model '.$this->modelName);
     }
   }
   

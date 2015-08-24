@@ -10,7 +10,8 @@ class BidRequest extends \openrtb\abstractions\BaseModel {
     ),
     'imp' => array(
       'required' => true,
-      'type' => 'openrtb\models\Impression',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => 'openrtb\models\Impression'
     ),
     'app' => array(
       'type' => 'openrtb\models\App',
@@ -41,7 +42,8 @@ class BidRequest extends \openrtb\abstractions\BaseModel {
       'default_value' => 0,
     ),
     'cur' => array(
-      'type' => 'openrtb\models\Currency',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_STRING
     ),
     'bcat' => array(
       'type' => self::ATTR_ARRAY,

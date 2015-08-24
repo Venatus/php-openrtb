@@ -32,7 +32,7 @@ class Impression extends \openrtb\abstractions\BaseModel {
     ),
     'bidfloor' => array(
       'type' => self::ATTR_FLOAT,
-      'default_value' => 0,
+      'default_value' => 0.0,
     ),
     'bidfloorcur' => array(
       'type' => self::ATTR_STRING,

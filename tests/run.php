@@ -26,3 +26,4 @@ $bidResponse->hydrate($exampleResponse);
 //$_SERVER['argv'] = array('phpunit','--configuration=conf.xml');
 //$_SERVER['argc'] = count($_SERVER['argv']);
 //\PHPUnit_TextUI_Command::main();
+

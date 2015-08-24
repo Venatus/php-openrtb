@@ -5,58 +5,58 @@ class Bid extends \openrtb\abstractions\BaseModel {
   
 	protected $attributes = array(
 		'id' => array(
-      'required' => true,
-			'type' => 'string'
+      		'required' => true,
+			'type' => self::ATTR_ID
 		),
 		'impid' => array(
-      'required' => true,
-			'type' => 'string'
+      		'required' => true,
+			'type' => self::ATTR_STRING
 		),
 		'price' => array(
-      'required' => true,
-			'type' => 'float'
+      		'required' => true,
+			'type' => self::ATTR_FLOAT
 		),
 		'adid' => array(
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'nurl' => array(
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'adm' => array(
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'adomain' => array(
- 			'type' =>  'array',
- 			'sub_type' => 'string'
+ 			'type' =>  self::ATTR_ARRAY,
+ 			'sub_type' => self::ATTR_STRING
 		),
 		'bundle' => array(
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'iurl' => array(
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'cid' => array(
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'crid' => array(
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'cat' => array(
- 			'type' =>  'array',
- 			'sub_type' => 'string'
+ 			'type' =>  self::ATTR_ARRAY,
+ 			'sub_type' => self::ATTR_STRING
 		),
 		'attr' => array(
- 			'type' =>  'array',
- 			'sub_type' => 'integer'
+ 			'type' =>  self::ATTR_ARRAY,
+ 			'sub_type' => self::ATTR_INTEGER
 		),
 		'dealid' => array(
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'h' => array(
-			'type' => 'integer'
+			'type' => self::ATTR_INTEGER
 		),
 		'w' => array(
-			'type' => 'integer'
+			'type' => self::ATTR_INTEGER
 		),
  		'ext' => array(
  			'type' =>  'openrtb\models\Extension'

@@ -5,62 +5,62 @@ class Content extends \openrtb\abstractions\BaseModel {
   
 	protected $attributes = array(
 		'id' => array (
-			'type' => 'string'
+			'type' => self::ATTR_ID
 		),
 		'episode' => array (
-			'type' => 'integer'
+			'type' => self::ATTR_INTEGER
 		),
 		'title' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'series' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'season' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'producer' => array (
 			'type' => 'openrtb\models\Producer'
 		),
 		'url' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'cat' => array (
-			'type' => 'array',
-			'sub_type' => 'string'
+			'type' => self::ATTR_ARRAY,
+			'sub_type' => self::ATTR_STRING
 		),
 		'videoquality' => array (
-			'type' => 'integer'
+			'type' => self::ATTR_INTEGER
 		),
 		'context' => array (
-			'type' => 'integer'
+			'type' => self::ATTR_INTEGER
 		),
 		'contentrating' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'userrating' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'qagmediarating' => array (
-			'type' => 'integer'
+			'type' => self::ATTR_INTEGER
 		),
 		'keywords' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'livestream' => array (
-			'type' => 'integer'
+			'type' => self::ATTR_INTEGER
 		),
 		'sourcerelationship' => array (
-			'type' => 'integer'
+			'type' => self::ATTR_INTEGER
 		),
 		'len' => array (
-			'type' => 'integer'
+			'type' => self::ATTR_INTEGER
 		),
 		'language' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'embeddable' => array (
-			'type' => 'integer'
+			'type' => self::ATTR_INTEGER
 		),
 		'ext' => array (
 			'type' => 'openrtb\models\Extension'

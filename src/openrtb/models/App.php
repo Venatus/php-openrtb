@@ -5,40 +5,40 @@ class App extends \openrtb\abstractions\BaseModel {
   
 	protected $attributes = array(
 		'id' => array(
-			'type' => 'string'
+			'type' => self::ATTR_ID
 		),
 		'name' => array(
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'bundle' => array(
-			'type' => 'string'
+			'type' => self::ATTR_STRING
  		),
  		'domain' => array (
- 			'type' => 'string'
+ 			'type' => self::ATTR_STRING
  		),
  		'storeurl' => array(
- 			'type' =>  'string'
+ 			'type' =>  self::ATTR_STRING
  		),
  		'cat' => array(
- 			'type' =>  'array',
- 			'sub_type' => 'string'
+ 			'type' =>  self::ATTR_ARRAY,
+ 			'sub_type' => self::ATTR_STRING
  		),
  		'sectioncat' => array(
- 			'type' =>  'array',
- 			'sub_type' => 'string'
+ 			'type' =>  self::ATTR_ARRAY,
+ 			'sub_type' => self::ATTR_STRING
  		),
  		'pagecat' => array(
- 			'type' =>  'array',
- 			'sub_type' => 'string'
+ 			'type' =>  self::ATTR_ARRAY,
+ 			'sub_type' => self::ATTR_STRING
  		),
  		'ver' => array(
- 			'type' =>  'string'
+ 			'type' =>  self::ATTR_STRING
  		),
  		'privacypolicy' => array(
- 			'type' =>  'integer'
+ 			'type' =>  self::ATTR_INTEGER
  		),
  		'paid' => array(
- 			'type' =>  'integer'
+ 			'type' =>  self::ATTR_INTEGER
  		),
  		'publisher' => array(
  			'type' =>  'openrtb\models\Publisher'
@@ -47,7 +47,7 @@ class App extends \openrtb\abstractions\BaseModel {
  			'type' =>  'openrtb\models\Content'
  		),
  		'keywords' => array(
- 			'type' =>  'string'
+ 			'type' =>  self::ATTR_STRING
  		),
  		'ext' => array(
  			'type' =>  'openrtb\models\Extension'

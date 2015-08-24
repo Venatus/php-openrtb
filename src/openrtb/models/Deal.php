@@ -6,26 +6,26 @@ class Deal extends \openrtb\abstractions\BaseModel {
   protected $attributes = array(
     'id' => array(
       'required' => true,
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
     ),
     'bidfloor' => array(
-      'type' => 'float',
+      'type' => self::ATTR_FLOAT,
       'default_value' => 0,
     ),
     'bidfloorcur' => array(
-      'type' => 'string',
+      'type' => self::ATTR_STRING,
       'default_value' => 'USD',
     ),
     'at' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'wseat' => array(
-      'type' => 'array',
-      'sub_type' => 'string',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_STRING,
     ),
     'wadomain' => array(
-      'type' => 'array',
-      'sub_type' => 'string',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_STRING,
     ),
     'ext' => array(
       'type' => 'openrtb\models\Extension',

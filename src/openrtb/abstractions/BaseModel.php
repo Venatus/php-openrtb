@@ -2,6 +2,12 @@
 namespace openrtb\abstractions;
 
 abstract class BaseModel {
+  //Type 'id' means string or integer. Spec defines 'id' as string but all examples and implementation pass 'id' as an integer...
+  const ATTR_ID = 'id';
+  const ATTR_STRING = 'string';
+  const ATTR_INTEGER = 'integer';
+  const ATTR_FLOAT = 'float';
+  const ATTR_ARRAY = 'array';
   
   protected $attributes = [];
   protected $data = [];
@@ -18,7 +24,7 @@ abstract class BaseModel {
   }
   
   public function validateType($obj, $type, $subType = null){
-    if(preg_match('/^openrtb\\\models\\\/', $type)){
+    if($this->isModel($type)){
       if(is_a($obj, $type)){
         if($obj->hasRequiredAttributes()){
           return true;
@@ -30,16 +36,19 @@ abstract class BaseModel {
       }
     }
     switch($type){
-      case 'string':
+      case self::ATTR_ID: 
+        return (is_string($obj) || is_integer($obj))? true : false;
+        break;
+      case self::ATTR_STRING:
         return is_string($obj)? true : false;
         break;
-      case 'integer':
+      case self::ATTR_INTEGER:
         return is_integer($obj)? true : false;
         break;
-      case 'float':
+      case self::ATTR_FLOAT:
         return is_float($obj)? true : false;
         break;
-      case 'array':
+      case self::ATTR_ARRAY:
         //only collection type supported...
         if($subType !== null){
           if(is_array($obj)){
@@ -107,6 +116,10 @@ abstract class BaseModel {
   
   public function getDataAsJson(){
     return json_encode($this->getDataAsArray());
+  }
+
+  protected function isModel($type) {
+    return preg_match('/^openrtb\\\models\\\/', $type);
   }
   
 }

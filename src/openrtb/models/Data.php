@@ -5,13 +5,13 @@ class Data extends \openrtb\abstractions\BaseModel {
   
 	protected $attributes = array(
 		'id' => array (
-			'type' => 'string'
+			'type' => self::ATTR_ID
 		),
 		'name' => array (
-			'type' => 'string'
+			'type' => self::ATTR_STRING
 		),
 		'segment' => array (
-			'type' => 'array',
+			'type' => self::ATTR_ARRAY,
 			'sub_type' => 'openrtb\models\Segment'
 		),
 		'ext' => array (

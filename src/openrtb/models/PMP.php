@@ -5,10 +5,10 @@ class PMP extends \openrtb\abstractions\BaseModel {
   
 	protected $attributes = array(
 		'private_auction' => array(
-			'type' => 'integer'
+			'type' => self::ATTR_INTEGER
 		),
 		'deals' => array(
-			'type' => 'array',
+			'type' => self::ATTR_ARRAY,
 			'sub_type' => 'openrtb\models\Deal'
 		),
 		'ext' => array(

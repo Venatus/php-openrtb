@@ -6,7 +6,7 @@ class BidRequest extends \openrtb\abstractions\BaseModel {
   protected $attributes = array(
     'id' => array(
       'required' => true,
-      'type' => 'string',
+      'type' => self::ATTR_ID,
     ),
     'imp' => array(
       'required' => true,
@@ -22,34 +22,34 @@ class BidRequest extends \openrtb\abstractions\BaseModel {
       'type' => 'openrtb\models\User',
     ),
     'test' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
       'default_value' => 0,
     ),
     'at' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
       'default_value' => 2,
     ),
     'tmax' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
     ),
     'wseat' => array(
-      'type' => 'array',
-      'sub_type' => 'string',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_STRING,
     ),
     'allimps' => array(
-      'type' => 'integer',
+      'type' => self::ATTR_INTEGER,
       'default_value' => 0,
     ),
     'cur' => array(
       'type' => 'openrtb\models\Currency',
     ),
     'bcat' => array(
-      'type' => 'array',
-      'sub_type' => 'string',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_STRING,
     ),
     'badv' => array(
-      'type' => 'array',
-      'sub_type' => 'string',
+      'type' => self::ATTR_ARRAY,
+      'sub_type' => self::ATTR_STRING,
     ),
     'regs' => array(
       'type' => 'openrtb\models\Regulation',

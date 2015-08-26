@@ -13,8 +13,11 @@ function addDelay() {
 
 //Get BidRequest
 try {
-	//$jsonData = file_get_contents('php://input');
-	$jsonData = file_get_contents(__DIR__.'/example_requests/sticky_ads_example_2.txt');
+	if($_SERVER['REQUEST_METHOD'] === 'POST') {
+		$jsonData = file_get_contents('php://input');
+	} else {
+		$jsonData = file_get_contents(__DIR__.'/example_requests/sticky_ads_example_2.txt');
+	}
 	$bidRequest = new \openrtb\BidRequest();
 	$bidRequest->hydrate($jsonData);
 } catch(\Exception $e) {
@@ -63,7 +66,7 @@ if(rand(1, 200) === 1 || $noImp) {
 		$floatPrice = $priceInCents / 100;
 		$bid->set('price', $floatPrice);
 		$bid->set('nurl', BIDDER_URL . 'win/' . $bidId);
-		$bid->set('adm', file_get_contents('./vast_tags/tag_' . $i . '.xml'));
+		$bid->set('adm', file_get_contents(__DIR__ . '/vast_tags/tag_' . $i . '.xml'));
 
 		$seatBid->set('bid', [$bid]);
 		$seats[] = $seatBid;

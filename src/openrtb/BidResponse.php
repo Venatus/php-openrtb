@@ -33,5 +33,4 @@ class BidResponse extends \openrtb\abstractions\ParentModel {
   public function __constuct($reponse){
     
   }
-    
 }

@@ -147,7 +147,6 @@ abstract class BaseModel {
         if($this->validateType($value, $type, $subType)){
           $this->data[$item] = $value;
         } else {
-          var_dump($value);
           throw new \openrtb\exceptions\ValidationException('Item "'.$item.'" failed validation of type "'.$type.'" for model '.$this->modelName);
         }
       } else {

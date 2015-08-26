@@ -1,0 +1,40 @@
+<VideoAdServingTemplate 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="vast.xsd">
+    <Ad id="videoAd_wrapper">
+      <AdSystem>AdServer</AdSystem>
+      <Impression>
+				<![CDATA[http://www.primarysite.com/tracker?imp]]>
+      </Impression>
+      <Creatives>
+      	<Creative>
+      		<Linear>
+	   				<TrackingEvents>
+			        <Tracking event="start">
+		            <![CDATA[http://www.secondaryadserver.com/ad/start]]>
+							</Tracking>
+							<Tracking event="midpoint">
+		            <![CDATA[http://www.secondaryadserver.com/ad/midpoint]]>
+							</Tracking>
+							<Tracking event="thirdQuartile">
+		            <![CDATA[http://www.secondaryadserver.com/ad/thirdQuartile]]>
+							</Tracking>
+							<Tracking event="complete">
+		            <![CDATA[http://www.secondaryadserver.com/ad/complete]]>
+							</Tracking>
+		  			</TrackingEvents>
+		  			<VideoClicks>
+              <ClickThrough>
+                <![CDATA[http://servedby.flashtalking.com/click/1/49197;1244030;50126;211;0/?ft_width=1&ft_height=1&url=698502642]]>
+              </ClickThrough>
+          	</VideoClicks>
+          	<MediaFiles>
+              <MediaFile delivery="progressive" bitrate="1200" width="600" height="400" type="video/mp4">
+                <![CDATA[http://cdn1.vntsm.com/151810/Dragon_RTTE_TV20_NewCore_Post_New_UK_600x400.mp4]]>
+              </MediaFile>
+          	</MediaFiles>
+		  		</Linear>
+		  	</Creative>
+	  	</Creatives>
+    </Ad>
+</VideoAdServingTemplate>

@@ -9,7 +9,8 @@
   ],
   "require": {
     "php": ">=5.5.0",
-    "ext-curl": "*"
+    "ext-curl": "*",
+    "multirequest/multirequest": "1.*"
   },
   "suggest": {
     "ext-apc": "Allows opcode caching"

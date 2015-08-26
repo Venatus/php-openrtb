@@ -4,8 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "480e9dd6853dc5a5a0bf553a20f34f27",
-    "packages": [],
+    "hash": "c475fca7dd027c86eb016d95897cbe00",
+    "packages": [
+        {
+            "name": "multirequest/multirequest",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barbushin/multirequest.git",
+                "reference": "c84cf709b0c515e86691e6573eadf2d0e0e24ff3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barbushin/multirequest/zipball/c84cf709b0c515e86691e6573eadf2d0e0e24ff3",
+                "reference": "c84cf709b0c515e86691e6573eadf2d0e0e24ff3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "MultiRequest": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD 3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Barbushin",
+                    "email": "barbushin@gmail.com",
+                    "homepage": "http://linkedin.com/in/barbushin"
+                }
+            ],
+            "description": "PHP library for easy and flexible multithread requests handling by CURL.",
+            "homepage": "https://github.com/barbushin/multirequest",
+            "keywords": [
+                "curl",
+                "multirequest",
+                "multithread",
+                "php",
+                "request"
+            ],
+            "time": "2014-10-16 13:13:45"
+        }
+    ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
@@ -412,16 +463,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.5",
+            "version": "4.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "9b7417edaf28059ea63d86be941e6004dbfcc0cc"
+                "reference": "2246830f4a1a551c67933e4171bf2126dc29d357"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9b7417edaf28059ea63d86be941e6004dbfcc0cc",
-                "reference": "9b7417edaf28059ea63d86be941e6004dbfcc0cc",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2246830f4a1a551c67933e4171bf2126dc29d357",
+                "reference": "2246830f4a1a551c67933e4171bf2126dc29d357",
                 "shasum": ""
             },
             "require": {
@@ -480,7 +531,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-08-19 09:20:57"
+            "time": "2015-08-24 04:09:38"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

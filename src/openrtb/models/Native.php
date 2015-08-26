@@ -1,7 +1,7 @@
 <?php
 namespace openrtb\models;
 
-class Banner extends \openrtb\abstractions\BaseModel {
+class Native extends \openrtb\abstractions\BaseModel {
   
   protected $attributes = array(
     'id' => array(

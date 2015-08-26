@@ -37,7 +37,7 @@ abstract class BaseModel {
    * @param boolean $fromJSON Flag to bypass json_decode when $data is already decoded
    */
   public function hydrate($data, $fromJson = true){
-    $data = ($fromJson)? json_decode($data): $data;
+    $data = ($fromJson)? json_decode($data) : $data;
 
     if($data){
       foreach($this->attributes as $attr=>$opts) {

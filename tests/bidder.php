@@ -10,10 +10,11 @@ function addDelay() {
 }
 
 function getBidderUrl() {
-	return 'http://' . $_SERVER['HTTP_HOST'] . '/';
+	$protocol = ($_SERVER['SERVER_PORT'] === '80')? 'http://' : 'https://';
+	return $protocol . $_SERVER['HTTP_HOST'] . '/';
 }
 
-//Get BidRequest
+//Get BidRequestsa
 try {
 	if($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$jsonData = file_get_contents('php://input');
@@ -25,7 +26,6 @@ try {
 } catch(\Exception $e) {
 	var_dump($e->getMessage());
 }
-
 
 addDelay();
 

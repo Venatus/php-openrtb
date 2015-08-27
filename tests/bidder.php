@@ -55,7 +55,7 @@ if(rand(1, 200) === 1 || $noImp) {
 
 	for($i = 1; $i <= $numSeatBid; $i++) {
 		$seatBid = new \openrtb\models\SeatBid();
-		$seatBid->set('seat', $bidders[$i]);
+		$seatBid->set('seat', $bidders[$i-1]);
 
 		$bidId = sha1(uniqid());
 

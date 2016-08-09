@@ -1,3 +1,5 @@
+Please note: This project is not supported. We are not activily using the PHP implementation - Project was paused before it was fully completed. Work is required on tests and upgrade to latest version of the Open RTB specification.
+
 # OpenRTB 2.3.1 for PHP
 
 This library has been created for PHP developers using the OpenRTB protocol. It provides a very lightweight wrapper to create, validate, and hydrate **Bid Requests** and **Bid Responses**. Getting started could not be easier, find our package on packagist: https://packagist.org/packages/venatus/openrtb
